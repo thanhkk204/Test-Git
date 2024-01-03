@@ -17,9 +17,19 @@ var myInfor = {
  * Bước 4: Dùng appendChild để thêm phần tử đó vào DOM.
  */
 
+// Dùng template string chỉ cần 2 bước:
 var inforElement = document.getElementsByClassName("infor")[0]; // Bước 1
-console.log(inforElement);
 
-var inforHTML = document.createElement("div"); // Bước 2
-inforHTML.innerText = myInfor.myName; // Bước 3
-inforElement.appendChild(inforHTML);
+inforElement.innerHTML = `
+<div>
+  <div>Tên: ${myInfor.myName}<div>
+  <div>Tuổi: ${myInfor.age + 1}<div>
+  <div>Địa chỉ: ${myInfor.address}<div>
+  <div>mssv: ${myInfor.mssv}<div>
+</div>
+`; // Bước 2.
+
+/**
+ * `` = template string là một cú pháp của es6 để viết biểu thức trong chuỗi.
+ * ${ // viet bieu thuc, bien vao day}
+ */
