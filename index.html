@@ -30,15 +30,22 @@
           class="form-control"
           id="email"
           aria-describedby="emailHelp"
+          required
         />
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input value="" type="password" class="form-control" id="password" />
+        <input
+          value=""
+          type="password"
+          class="form-control"
+          id="password"
+          required
+        />
       </div>
       <div class="mb-3">
         <label for="confirmPass" class="form-label">Confirm password</label>
-        <input type="password" class="form-control" id="confirmPass" />
+        <input type="password" class="form-control" id="confirmPass" required />
       </div>
 
       <button type="button" onclick="register()" class="btn btn-primary">
