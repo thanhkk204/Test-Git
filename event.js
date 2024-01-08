@@ -12,7 +12,6 @@ function validationForm(user) {
     alert("Mat khau nhap lai khong khop!");
     return false;
   }
-  // validate
   return true;
 }
 function register() {
@@ -31,3 +30,19 @@ function register() {
     alert("Dang ky thanh cong!");
   }
 }
+
+/**
+ * Các giá trị khi bị ép kiểu sẽ trở thành falsy:
+ * 1. False
+ * 2. Null
+ * 3. Undefined
+ * 4. 0
+ * 5. NaN
+ * 6. ""
+ * 7. -0
+ */
+
+/**
+ * Đăng nhập với username, password:
+ * Khớp 1 account có sẵn trong localStorage thì báo "Đăng nhập thành công!"
+ */
