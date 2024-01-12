@@ -1,7 +1,26 @@
 import "./style.css";
+import Navigo from "navigo";
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <h2>Chao ca lop!</h2>
-  </div>
-`;
+const router = new Navigo("/");
+
+const app = document.getElementById("app");
+const HomePage = () => {
+  // logic code
+  return `
+  <h2>HomePage</h2>
+  `;
+};
+
+const AboutPage = () => {
+  return `
+  <h1>AboutPage<h1>
+  `;
+};
+
+const render = (target, content) => {
+  target.innerHTML = content();
+};
+
+router.on("/home", () => render(app, HomePage));
+router.on("/about", () => render(app, AboutPage));
+router.resolve();
