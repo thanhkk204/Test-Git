@@ -1,26 +1,12 @@
+import "./node_modules/bootstrap/dist/js/bootstrap.js";
+import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import Navigo from "navigo";
-
-const router = new Navigo("/");
-
+import { HomePage } from "./src/pages/HomePage.js";
+import { AboutPage } from "./src/pages/AboutPage.js";
+import { render } from "./src/utils/common.js";
 const app = document.getElementById("app");
-const HomePage = () => {
-  // logic code
-  return `
-  <h2>HomePage</h2>
-  `;
-};
-
-const AboutPage = () => {
-  return `
-  <h1>AboutPage<h1>
-  `;
-};
-
-const render = (target, content) => {
-  target.innerHTML = content();
-};
-
+const router = new Navigo("/", { linksSelector: "a" });
 router.on("/home", () => render(app, HomePage));
 router.on("/about", () => render(app, AboutPage));
 router.resolve();
