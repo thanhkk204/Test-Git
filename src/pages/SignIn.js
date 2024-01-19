@@ -1,6 +1,6 @@
 
 const SignIn = () => {
-    return ` <form> 
+    return /*html*/ `<form> 
     <h1>Login</h1>
     <div class="mb-3">
       <label for="email" class="form-label">Email address</label>

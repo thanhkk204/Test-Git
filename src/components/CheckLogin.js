@@ -19,15 +19,14 @@ const login = () => {
       password,
     };
     if (validationForm(user)) {
-      var usersData = JSON.parse(localStorage.getItem("users"));
-      if (usersData && usersData.length > 0) {
-        usersData.some((item) => {
-          if (item.email === email && item.password === password) {
-            alert("Dang nhap thanh cong!");
-            return;
-          }
-        });
-      }
+      fetch("http://localhost:3000/login" , {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      }).then(data => data.json()).then(data =>console.log(data)).catch((err) => console.log(err))
     }
   }
   export default login

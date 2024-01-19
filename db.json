@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$UoMgqV5YV.cbl/vwPIByj.7cVSP/F3yIwZTlHNnD/ErxlqmPaBKHy",
+      "id": 1
+    },
+    {
+      "email": "thanh@gmail.com",
+      "password": "$2a$10$s3.ONJI4RWtxD5dZvnzOxeOpDcCE.yQtPV0.XB6fbUgEK3ZOfhkRa",
+      "id": 2
+    },
+    {
+      "email": "thanhlhph42255@fpt.edu.vn",
+      "password": "$2a$10$7U5k6dtJjJVWWH5lbunfKuLGIvAZQfaajgBWeqCMBePUTHZlHXjfO",
+      "id": 3
+    }
+  ]
+}

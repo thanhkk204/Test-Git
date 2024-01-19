@@ -7,14 +7,22 @@ function register() {
   var confirmPass = document.getElementById("confirmPass").value;
   var user = {
     email,
-    password,
-    confirmPass,
+    password
   };
 
-  if (validRegister(user)) {
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("Dang ky thanh cong!");
+  if (validRegister({
+    email,
+    password,
+    confirmPass
+  })) {
+    fetch("http://localhost:3000/register" , {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    }).then(data => data.json()).then(data =>console.log(data)).catch((err) => console.log(err))
   }
 }
 
